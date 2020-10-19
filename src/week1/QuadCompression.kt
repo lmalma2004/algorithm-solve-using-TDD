@@ -13,4 +13,8 @@ class QuadCompression {
     fun compressArea(area: Array<IntArray>): Int {
         return 0
     }
+
+    fun divideArea(loc: Pair<Int, Int>, size: Int): Array<Pair<Int, Int>> {
+        return arrayOf()
+    }
 }
