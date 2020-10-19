@@ -25,20 +25,23 @@ internal class TriangleSnailTest {
         val arrayListOfSize1 = arrayListOf(
                 IntArray(1)
         )
-        assertEquals(arrayListOfSize1, triangleSnail.createArrayList(1))
+        val emptyArrayList1 = triangleSnail.createArrayList(1)
+        assert(isEqualSize(arrayListOfSize1, emptyArrayList1))
 
         val arrayListOfSize2 = arrayListOf(
                 IntArray(1),
                 IntArray(2)
         )
-        assertEquals(arrayListOfSize2, triangleSnail.createArrayList(2))
+        val emptyArrayList2 = triangleSnail.createArrayList(2)
+        assert(isEqualSize(arrayListOfSize2, emptyArrayList2))
 
         val arrayListOfSize3 = arrayListOf(
                 IntArray(1),
                 IntArray(2),
                 IntArray(3)
         )
-        assertEquals(arrayListOfSize3, triangleSnail.createArrayList(3))
+        val emptyArrayList3 = triangleSnail.createArrayList(3)
+        assert(isEqualSize(arrayListOfSize3, emptyArrayList3))
 
         val arrayListOfSize4 = arrayListOf(
                 IntArray(1),
@@ -46,7 +49,8 @@ internal class TriangleSnailTest {
                 IntArray(3),
                 IntArray(4)
         )
-        assertEquals(arrayListOfSize4, triangleSnail.createArrayList(4))
+        val emptyArrayList4 = triangleSnail.createArrayList(4)
+        assert(isEqualSize(arrayListOfSize4, emptyArrayList4))
     }
 
     @Test
@@ -102,5 +106,17 @@ internal class TriangleSnailTest {
         val emptyArrayList3 = triangleSnail.createArrayList(6)
         val fillArrayList3 = triangleSnail.fillArrayList(emptyArrayList3)
         assertEquals(case3, triangleSnail.getResult(fillArrayList3))
+    }
+
+    private fun isEqualSize(arrayList1: ArrayList<IntArray>, arrayList2: ArrayList<IntArray>): Boolean {
+        if (arrayList1.size != arrayList2.size)
+            return false
+
+        for (i in 0 until arrayList1.size) {
+            if (arrayList1[i].size != arrayList2[i].size)
+                return false
+        }
+
+        return true
     }
 }

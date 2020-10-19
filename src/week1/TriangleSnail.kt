@@ -6,8 +6,15 @@ class TriangleSnail {
         return answer
     }
 
-    fun createArrayList(size: Int): ArrayList<IntArray> {
-        return arrayListOf()
+    fun createArrayList(n: Int): ArrayList<IntArray> {
+        val result = arrayListOf<IntArray>()
+
+        for(size in 1..n) {
+            val intArray = IntArray(size)
+            result.add(intArray)
+        }
+
+        return result
     }
 
     fun getResult(fillArrayList: java.util.ArrayList<IntArray>): IntArray {
