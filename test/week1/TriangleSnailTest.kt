@@ -59,9 +59,29 @@ internal class TriangleSnailTest {
                 intArrayOf(3, 10, 8),
                 intArrayOf(4, 5, 6, 7)
         )
+        val emptyArrayList1 = triangleSnail.createArrayList(4)
+        assertEquals(case1, triangleSnail.fillArrayList(emptyArrayList1))
 
-        val emptyArrayList = triangleSnail.createArrayList(4)
-        assertEquals(case1, triangleSnail.fillArrayList(emptyArrayList))
+        val case2 = arrayListOf(
+                intArrayOf(1),
+                intArrayOf(2, 12),
+                intArrayOf(3, 13, 11),
+                intArrayOf(4,14,15,10),
+                intArrayOf(5,6,7,8,9)
+        )
+        val emptyArrayList2 = triangleSnail.createArrayList(4)
+        assertEquals(case2, triangleSnail.fillArrayList(emptyArrayList2))
+
+        val case3 = arrayListOf(
+                intArrayOf(1),
+                intArrayOf(2, 15),
+                intArrayOf(3, 16, 14),
+                intArrayOf(4, 17, 21, 13),
+                intArrayOf(5, 18, 19, 20, 12),
+                intArrayOf(5, 6, 7, 8, 9, 10, 11)
+        )
+        val emptyArrayList3 = triangleSnail.createArrayList(4)
+        assertEquals(case3, triangleSnail.fillArrayList(emptyArrayList3))
     }
 
     @Test
@@ -69,9 +89,18 @@ internal class TriangleSnailTest {
         val triangleSnail = TriangleSnail()
 
         val case1 = intArrayOf(1, 2, 9, 3, 10, 8, 4, 5, 6, 7)
+        val emptyArrayList1 = triangleSnail.createArrayList(4)
+        val fillArrayList1 = triangleSnail.fillArrayList(emptyArrayList1)
+        assertEquals(case1, triangleSnail.getResult(fillArrayList1))
 
-        val emptyArrayList = triangleSnail.createArrayList(4)
-        val fillArrayList = triangleSnail.fillArrayList(emptyArrayList)
-        assertEquals(case1, triangleSnail.getResult(fillArrayList))
+        val case2 = intArrayOf(1, 2, 12, 3, 13, 11, 4, 14, 15, 10, 5, 6, 7, 8, 9)
+        val emptyArrayList2 = triangleSnail.createArrayList(5)
+        val fillArrayList2 = triangleSnail.fillArrayList(emptyArrayList2)
+        assertEquals(case2, triangleSnail.getResult(fillArrayList2))
+
+        val case3 = intArrayOf(1, 2, 15, 3, 16, 14, 4, 17, 21, 13, 5, 18, 19, 20, 12, 6, 7, 8, 9, 10, 11)
+        val emptyArrayList3 = triangleSnail.createArrayList(6)
+        val fillArrayList3 = triangleSnail.fillArrayList(emptyArrayList3)
+        assertEquals(case3, triangleSnail.getResult(fillArrayList3))
     }
 }
