@@ -66,8 +66,8 @@ internal class TriangleSnailTest {
                 intArrayOf(1),
                 intArrayOf(2, 12),
                 intArrayOf(3, 13, 11),
-                intArrayOf(4,14,15,10),
-                intArrayOf(5,6,7,8,9)
+                intArrayOf(4, 14, 15, 10),
+                intArrayOf(5, 6, 7, 8, 9)
         )
         val emptyArrayList2 = triangleSnail.createArrayList(4)
         assertEquals(case2, triangleSnail.fillArrayList(emptyArrayList2))
