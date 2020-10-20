@@ -1,7 +1,8 @@
-package week1
+package week1.quadCompressionTest
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import week1.quadCompression.QuadCompression
 
 class QuadCompressionTest {
     @Test

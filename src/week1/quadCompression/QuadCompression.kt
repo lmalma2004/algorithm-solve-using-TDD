@@ -1,4 +1,4 @@
-package week1
+package week1.quadCompression
 
 class QuadCompression {
     fun solution(arr: Array<IntArray>): IntArray {
