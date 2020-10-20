@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.assertThrows
 import week1.quadCompression2.Area
 import week1.quadCompression2.Point
-import week1.quadCompression2.QuadCompression2
 
 internal class AreaTest {
     @Test
@@ -120,20 +119,17 @@ internal class AreaTest {
     }
 
     @Test
-    fun testQuadCompressWhenSize1() {
-        var area = Area.create(arrayOf(intArrayOf(0)))
-        assertEquals(area.quadCompress(Point(0, 0), 1), intArrayOf(1, 0))
+    fun testQuadCompressShouldBeCalledOnlyOnce() {
 
-        area = Area.create(arrayOf(intArrayOf(1)))
-        assertEquals(area.quadCompress(Point(0, 0), 1), intArrayOf(0, 1))
     }
 
     @Test
-    fun testQuadCompressWhenSize2() {
-        var area = Area.create(arrayOf(intArrayOf(0)))
-        assertEquals(area.quadCompress(Point(0, 0), 1), intArrayOf(1, 0))
+    fun testQuadCompressShouldBeCalledOnlyTwice() {
 
-        area = Area.create(arrayOf(intArrayOf(1)))
-        assertEquals(area.quadCompress(Point(0, 0), 1), intArrayOf(0, 1))
+    }
+
+    @Test
+    fun testQuadCompressShouldBeCalledAtLeastThreeTime() {
+
     }
 }
