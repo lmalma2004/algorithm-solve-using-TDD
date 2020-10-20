@@ -2,11 +2,20 @@ package week1.quadCompression2
 
 class Divider {
     fun divide(startPoint: Point, areaSize: Int): ArrayList<Point> {
-        TODO("Not yet implemented")
+        val row = startPoint.row
+        val col = startPoint.col
+        val nextSize = nextSize(areaSize)
+
+        return arrayListOf(
+            Point(row, col),
+            Point(row, col + nextSize),
+            Point(row + nextSize, col),
+            Point(row + nextSize, col + nextSize)
+        )
     }
 
     fun nextSize(areaSize: Int): Int {
-        TODO("Not yet implemented")
+        return areaSize / 2
     }
 
 }

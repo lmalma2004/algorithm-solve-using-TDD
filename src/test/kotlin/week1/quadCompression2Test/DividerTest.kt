@@ -63,13 +63,13 @@ internal class DividerTest {
         val divider = Divider()
 
         var areas = divider.divide(Point(0, 0), 4)
-        assertEquals(areas[0], Point(0 + 4 / 2, 0 + 4 / 2))
+        assertEquals(areas[3], Point(0 + 4 / 2, 0 + 4 / 2))
 
         areas = divider.divide(Point(2,2), 4)
-        assertEquals(areas[0], Point(2 + 4 / 2, 2 + 4 / 2))
+        assertEquals(areas[3], Point(2 + 4 / 2, 2 + 4 / 2))
 
         areas = divider.divide(Point(4, 0), 4)
-        assertEquals(areas[0], Point(4 + 4 / 2, 0 + 4 / 2))
+        assertEquals(areas[3], Point(4 + 4 / 2, 0 + 4 / 2))
     }
 
     @Test
