@@ -119,16 +119,16 @@ internal class AreaTest {
 
     @Test
     fun testQuadCompressShouldBeCalledOnlyOnce() {
-
+        // 어떻게 하지?
     }
 
     @Test
     fun testQuadCompressShouldBeCalledOnlyTwice() {
-
+        // 어떻게 하지?
     }
 
     @Test
     fun testQuadCompressShouldBeCalledAtLeastThreeTime() {
-
+        // 어떻게 하지?
     }
 }
