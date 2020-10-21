@@ -1,6 +1,6 @@
 package week1.poppingBalloon
 
-class Balloon(val arr: IntArray) {
+data class Balloon(val arr: IntArray) {
 
     companion object {
         fun create(arr: IntArray): Balloon {
@@ -20,9 +20,18 @@ class Balloon(val arr: IntArray) {
         }
     }
 
-    fun pop(): Int {
-        val popper = Popper(this)
-        popper.checkBalloon()
-        return popper.execute()
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Balloon
+
+        if (!arr.contentEquals(other.arr)) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return arr.contentHashCode()
     }
 }
