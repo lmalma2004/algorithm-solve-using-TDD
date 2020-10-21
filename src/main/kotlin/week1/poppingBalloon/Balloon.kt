@@ -2,8 +2,8 @@ package week1.poppingBalloon
 
 data class Balloon(
     val num: Int,
-    val leftMin: Int,
-    val rightMin: Int
+    var leftMin: Int,
+    var rightMin: Int
 ) {
 
     companion object {
