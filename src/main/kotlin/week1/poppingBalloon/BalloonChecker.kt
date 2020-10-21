@@ -14,7 +14,7 @@ class BalloonChecker {
     private fun leftCheck(balloons: Array<Balloon>) {
         var currMin = balloons.first().num
 
-        for(i in 1 until balloons.size) {
+        for (i in 1 until balloons.size) {
             balloons[i].leftMin = currMin
             if (currMin > balloons[i].num) {
                 currMin = balloons[i].num
@@ -25,7 +25,7 @@ class BalloonChecker {
     private fun rightCheck(balloons: Array<Balloon>) {
         var currMin = balloons.last().num
 
-        for(i in balloons.size-2 downTo 0 step 1) {
+        for (i in balloons.size - 2 downTo 0 step 1) {
             balloons[i].rightMin = currMin
             if (currMin > balloons[i].num) {
                 currMin = balloons[i].num

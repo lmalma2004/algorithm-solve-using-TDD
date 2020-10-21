@@ -20,7 +20,7 @@ internal class BalloonCheckerTest {
 
     @Test
     fun `the rightMin of the idx balloon is the minimum value of the idx+1 ~ end-1 balloons`() {
-        val result = intArrayOf(-92, -92, -92, -92, -92, -71, -68, -61 , -33, 0)
+        val result = intArrayOf(-92, -92, -92, -92, -92, -71, -68, -61, -33, 0)
 
         val balloons = poppingBalloon.createBalloons(intArrayOf(-16, 27, 65, -2, 58, -92, -71, -68, -61, -33))
         val balloonChecker = BalloonChecker()
@@ -34,9 +34,9 @@ internal class BalloonCheckerTest {
         val result = 0
 
         val balloons = arrayOf(
-                Balloon(4, 3, 2),
-                Balloon(5, 1, -2),
-                Balloon(1, 0, -9)
+            Balloon(4, 3, 2),
+            Balloon(5, 1, -2),
+            Balloon(1, 0, -9)
         )
         val balloonChecker = BalloonChecker()
         val checkedBalloons = balloonChecker.check(balloons)
@@ -49,9 +49,9 @@ internal class BalloonCheckerTest {
         val result = 3
 
         val balloons = arrayOf(
-                Balloon(4, 5, 3),
-                Balloon(4, 3, 5),
-                Balloon(5, 6, 7)
+            Balloon(4, 5, 3),
+            Balloon(4, 3, 5),
+            Balloon(5, 6, 7)
         )
         val balloonChecker = BalloonChecker()
         val checkedBalloons = balloonChecker.check(balloons)
