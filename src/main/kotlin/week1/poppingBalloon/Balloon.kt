@@ -22,6 +22,7 @@ class Balloon(val arr: IntArray) {
 
     fun pop(): Int {
         val popper = Popper(this)
+        popper.checkBalloon()
         return popper.execute()
     }
 }
