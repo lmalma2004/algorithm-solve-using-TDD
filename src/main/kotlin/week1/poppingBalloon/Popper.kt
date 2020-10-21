@@ -3,11 +3,14 @@ package week1.poppingBalloon
 class Popper(val balloon: Balloon) {
     companion object {
         fun of(balloon: Balloon): Popper {
-            TODO("Not yet implemented")
+            return Popper(balloon)
         }
     }
 
     fun execute(): Int {
-        TODO("Not yet implemented")
+        val balloonChecker = BalloonChecker()
+        val checkedBalloon = balloonChecker.check(balloon)
+
+        return balloonChecker.count(checkedBalloon)
     }
 }
