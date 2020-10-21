@@ -33,7 +33,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2f2f6ec-7a20-4df3-a677-4ce8a2f1f645" name="Default Changelist" comment="" />
+    <list default="true" id="d2f2f6ec-7a20-4df3-a677-4ce8a2f1f645" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_10_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_agent_1_10_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_5_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_params_5_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_3_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_inline_3_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/algorithm-solve-using-TDD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/algorithm-solve-using-TDD.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/algorithm-solve-using-TDD.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/algorithm-solve-using-TDD.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week1/quadCompression2/QuadCompression2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week1/quadCompression2/QuadCompression2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/week1/quadCompression2Test/AreaTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/week1/quadCompression2Test/CompressorTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/week1/quadCompression2Test/DividerTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/week1/quadCompression2Test/QuadCompression2Test.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/week1/quadCompressionTest/QuadCompressionTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/week1/triangleSnailTest/TriangleSnailTest.kt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,12 +78,20 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="algorithm-solve-using-TDD" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="algorithm-solve-using-TDD" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -404,38 +443,42 @@
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
     <state x="1741" y="352" key="#com.intellij.ide.util.PackageChooserDialog/0.0.2682.1152@0.0.2682.1152" timestamp="1603259572027" />
-    <state width="2639" height="409" key="GridCell.Tab.0.bottom" timestamp="1603284615213">
+    <state x="1121" y="334" key="FileChooserDialogImpl" timestamp="1603285584360">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.0.bottom/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615213" />
-    <state width="2639" height="409" key="GridCell.Tab.0.center" timestamp="1603284615213">
+    <state x="1121" y="334" key="FileChooserDialogImpl/0.0.2682.1152@0.0.2682.1152" timestamp="1603285584360" />
+    <state width="2639" height="409" key="GridCell.Tab.0.bottom" timestamp="1603285537455">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.0.center/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615213" />
-    <state width="2639" height="409" key="GridCell.Tab.0.left" timestamp="1603284615213">
+    <state width="2639" height="409" key="GridCell.Tab.0.bottom/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537455" />
+    <state width="2639" height="409" key="GridCell.Tab.0.center" timestamp="1603285537455">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.0.left/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615213" />
-    <state width="2639" height="409" key="GridCell.Tab.0.right" timestamp="1603284615213">
+    <state width="2639" height="409" key="GridCell.Tab.0.center/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537455" />
+    <state width="2639" height="409" key="GridCell.Tab.0.left" timestamp="1603285537455">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.0.right/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615213" />
-    <state width="2639" height="409" key="GridCell.Tab.1.bottom" timestamp="1603284615214">
+    <state width="2639" height="409" key="GridCell.Tab.0.left/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537455" />
+    <state width="2639" height="409" key="GridCell.Tab.0.right" timestamp="1603285537455">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.1.bottom/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615214" />
-    <state width="2639" height="409" key="GridCell.Tab.1.center" timestamp="1603284615213">
+    <state width="2639" height="409" key="GridCell.Tab.0.right/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537455" />
+    <state width="2639" height="409" key="GridCell.Tab.1.bottom" timestamp="1603285537456">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.1.center/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615213" />
-    <state width="2639" height="409" key="GridCell.Tab.1.left" timestamp="1603284615213">
+    <state width="2639" height="409" key="GridCell.Tab.1.bottom/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537456" />
+    <state width="2639" height="409" key="GridCell.Tab.1.center" timestamp="1603285537456">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.1.left/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615213" />
-    <state width="2639" height="409" key="GridCell.Tab.1.right" timestamp="1603284615214">
+    <state width="2639" height="409" key="GridCell.Tab.1.center/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537456" />
+    <state width="2639" height="409" key="GridCell.Tab.1.left" timestamp="1603285537455">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
-    <state width="2639" height="409" key="GridCell.Tab.1.right/0.0.2682.1152@0.0.2682.1152" timestamp="1603284615214" />
+    <state width="2639" height="409" key="GridCell.Tab.1.left/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537455" />
+    <state width="2639" height="409" key="GridCell.Tab.1.right" timestamp="1603285537456">
+      <screen x="0" y="0" width="2682" height="1152" />
+    </state>
+    <state width="2639" height="409" key="GridCell.Tab.1.right/0.0.2682.1152@0.0.2682.1152" timestamp="1603285537456" />
     <state x="1024" y="281" key="RollbackChangesDialog" timestamp="1603283130004">
       <screen x="0" y="0" width="2682" height="1152" />
     </state>
