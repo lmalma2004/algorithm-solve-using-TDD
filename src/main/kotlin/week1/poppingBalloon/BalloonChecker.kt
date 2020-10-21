@@ -1,7 +1,7 @@
 package week1.poppingBalloon
 
 class BalloonChecker {
-    fun check(balloon: Balloon): Any {
+    fun check(balloons: Array<Balloon>): Any {
         TODO("Not yet implemented")
     }
 

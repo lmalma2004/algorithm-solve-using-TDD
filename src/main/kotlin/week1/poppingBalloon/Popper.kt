@@ -1,16 +1,16 @@
 package week1.poppingBalloon
 
-class Popper(val balloon: Balloon) {
+class Popper(private val balloons: Array<Balloon>) {
     companion object {
-        fun of(balloon: Balloon): Popper {
-            return Popper(balloon)
+        fun of(balloons: Array<Balloon>): Popper {
+            return Popper(balloons)
         }
     }
 
     fun execute(): Int {
         val balloonChecker = BalloonChecker()
-        val checkedBalloon = balloonChecker.check(balloon)
+        val checkedBalloons = balloonChecker.check(balloons)
 
-        return balloonChecker.count(checkedBalloon)
+        return balloonChecker.count(checkedBalloons)
     }
 }
