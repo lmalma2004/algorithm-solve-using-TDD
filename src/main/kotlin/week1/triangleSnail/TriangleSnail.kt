@@ -27,7 +27,13 @@ class TriangleSnail {
         return fillArrayList.flatMap { it.toList() }.toIntArray()
     }
 
-    private fun fillNumFromOutsideToInside(arrayList: ArrayList<IntArray>, row: Int, col: Int, num: Int, direc: String) {
+    private fun fillNumFromOutsideToInside(
+        arrayList: ArrayList<IntArray>,
+        row: Int,
+        col: Int,
+        num: Int,
+        direc: String
+    ) {
         if (!isRange(row, col, arrayList.size) || arrayList[row][col] != 0) {
             return
         }

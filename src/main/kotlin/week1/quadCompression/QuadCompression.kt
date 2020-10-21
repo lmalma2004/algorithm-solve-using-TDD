@@ -6,8 +6,8 @@ class QuadCompression {
     }
 
     fun quadCompress(arr: Array<IntArray>, loc: Pair<Int, Int>, size: Int): IntArray {
-        if(checkArea(arr, loc, size)) {
-            if(arr[loc.first][loc.second] == 0)
+        if (checkArea(arr, loc, size)) {
+            if (arr[loc.first][loc.second] == 0)
                 return intArrayOf(1, 0)
             return intArrayOf(0, 1)
         }
@@ -28,9 +28,9 @@ class QuadCompression {
     fun checkArea(area: Array<IntArray>, loc: Pair<Int, Int>, size: Int): Boolean {
         val num = area[loc.first][loc.second]
 
-        for(r in loc.first until loc.first + size) {
-            for(c in loc.second until loc.second + size) {
-                if(num != area[r][c])
+        for (r in loc.first until loc.first + size) {
+            for (c in loc.second until loc.second + size) {
+                if (num != area[r][c])
                     return false
             }
         }

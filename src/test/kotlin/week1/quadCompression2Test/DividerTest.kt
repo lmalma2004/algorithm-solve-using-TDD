@@ -23,7 +23,7 @@ internal class DividerTest {
         var areas = divider.divide(Point(0, 0), 4)
         assertEquals(areas[0], Point(0, 0))
 
-        areas = divider.divide(Point(2,2), 4)
+        areas = divider.divide(Point(2, 2), 4)
         assertEquals(areas[0], Point(2, 2))
 
         areas = divider.divide(Point(4, 0), 4)
@@ -37,7 +37,7 @@ internal class DividerTest {
         var areas = divider.divide(Point(0, 0), 4)
         assertEquals(areas[1], Point(0, 0 + 4 / 2))
 
-        areas = divider.divide(Point(2,2), 4)
+        areas = divider.divide(Point(2, 2), 4)
         assertEquals(areas[1], Point(2, 2 + 4 / 2))
 
         areas = divider.divide(Point(4, 0), 4)
@@ -51,7 +51,7 @@ internal class DividerTest {
         var areas = divider.divide(Point(0, 0), 4)
         assertEquals(areas[2], Point(0 + 4 / 2, 0))
 
-        areas = divider.divide(Point(2,2), 4)
+        areas = divider.divide(Point(2, 2), 4)
         assertEquals(areas[2], Point(2 + 4 / 2, 2))
 
         areas = divider.divide(Point(4, 0), 4)
@@ -65,7 +65,7 @@ internal class DividerTest {
         var areas = divider.divide(Point(0, 0), 4)
         assertEquals(areas[3], Point(0 + 4 / 2, 0 + 4 / 2))
 
-        areas = divider.divide(Point(2,2), 4)
+        areas = divider.divide(Point(2, 2), 4)
         assertEquals(areas[3], Point(2 + 4 / 2, 2 + 4 / 2))
 
         areas = divider.divide(Point(4, 0), 4)
