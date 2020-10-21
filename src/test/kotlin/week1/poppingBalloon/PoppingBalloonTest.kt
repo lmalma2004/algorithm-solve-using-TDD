@@ -36,7 +36,7 @@ internal class PoppingBalloonTest {
         val poppingBalloon = PoppingBalloon()
 
         assertThrows<IllegalArgumentException> { poppingBalloon.createBalloons(intArrayOf(-1000000001)) }
-        assertThrows<IllegalArgumentException> { poppingBalloon.createBalloons(IntArray(1000000001))}
+        assertThrows<IllegalArgumentException> { poppingBalloon.createBalloons(intArrayOf(1000000001))}
     }
 
     @Test
