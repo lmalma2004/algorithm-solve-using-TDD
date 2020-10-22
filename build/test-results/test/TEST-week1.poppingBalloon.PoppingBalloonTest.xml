@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="week1.poppingBalloon.PoppingBalloonTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-10-22T10:09:46" hostname="준모컴퓨터" time="0.07">
+  <properties/>
+  <testcase name="createBalloons() should be every number in array is different()" classname="week1.poppingBalloon.PoppingBalloonTest" time="0.005"/>
+  <testcase name="createBalloons() should be all numbers in array are integers from -1,000,000,000 to 1,000,000,000()" classname="week1.poppingBalloon.PoppingBalloonTest" time="0.005"/>
+  <testcase name="createBalloons() should be array size should be between 1 and 1,000,000()" classname="week1.poppingBalloon.PoppingBalloonTest" time="0.036"/>
+  <testcase name="test case #1()" classname="week1.poppingBalloon.PoppingBalloonTest" time="0.007"/>
+  <testcase name="test case #2()" classname="week1.poppingBalloon.PoppingBalloonTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
