@@ -1,11 +1,8 @@
-package week1.quadCompression2Test
+package week1.quadCompression2
 
-import com.sun.org.apache.xpath.internal.operations.Div
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
-import week1.quadCompression2.Divider
-import week1.quadCompression2.Point
 
 internal class DividerTest {
     @Test

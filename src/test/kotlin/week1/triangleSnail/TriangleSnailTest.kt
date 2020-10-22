@@ -1,8 +1,7 @@
-package week1.triangleSnailTest
+package week1.triangleSnail
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import week1.triangleSnail.TriangleSnail
 
 internal class TriangleSnailTest {
     @Test

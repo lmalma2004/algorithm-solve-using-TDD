@@ -1,8 +1,7 @@
-package week1.quadCompression2Test
+package week1.quadCompression2
 
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
-import week1.quadCompression2.QuadCompression2
 
 internal class QuadCompression2Test {
     @Test

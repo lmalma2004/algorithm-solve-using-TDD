@@ -34,9 +34,9 @@ internal class BalloonCheckerTest {
         val result = 0
 
         val balloons = arrayOf(
-                Balloon(4, 3, 2),
-                Balloon(5, 1, -2),
-                Balloon(1, 0, -9)
+            Balloon(4, 3, 2),
+            Balloon(5, 1, -2),
+            Balloon(1, 0, -9)
         )
         val balloonChecker = BalloonChecker()
 
@@ -48,9 +48,9 @@ internal class BalloonCheckerTest {
         val result = 3
 
         val balloons = arrayOf(
-                Balloon(4, 5, 3),
-                Balloon(4, 3, 5),
-                Balloon(5, 6, 7)
+            Balloon(4, 5, 3),
+            Balloon(4, 3, 5),
+            Balloon(5, 6, 7)
         )
         val balloonChecker = BalloonChecker()
 

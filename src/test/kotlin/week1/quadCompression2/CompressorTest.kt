@@ -1,10 +1,8 @@
-package week1.quadCompression2Test
+package week1.quadCompression2
 
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
-import week1.quadCompression2.Compressor
-import week1.quadCompression2.Point
 
 internal class CompressorTest {
     @Test

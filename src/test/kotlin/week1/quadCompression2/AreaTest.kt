@@ -1,10 +1,9 @@
-package week1.quadCompression2Test
+package week1.quadCompression2
 
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.assertThrows
-import week1.quadCompression2.Area
 
 internal class AreaTest {
     @Test

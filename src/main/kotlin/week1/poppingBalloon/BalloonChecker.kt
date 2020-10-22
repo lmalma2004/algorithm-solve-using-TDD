@@ -15,7 +15,7 @@ class BalloonChecker {
         balloons.first().leftMin = balloons.first().num + 1
 
         var currMin = balloons.first().num
-        for(i in 1 until balloons.size) {
+        for (i in 1 until balloons.size) {
             balloons[i].leftMin = currMin
             if (currMin > balloons[i].num) {
                 currMin = balloons[i].num
@@ -27,7 +27,7 @@ class BalloonChecker {
         balloons.last().rightMin = balloons.last().num + 1
 
         var currMin = balloons.last().num
-        for(i in balloons.size-2 downTo 0 step 1) {
+        for (i in balloons.size - 2 downTo 0 step 1) {
             balloons[i].rightMin = currMin
             if (currMin > balloons[i].num) {
                 currMin = balloons[i].num
