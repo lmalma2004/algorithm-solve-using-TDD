@@ -7,6 +7,14 @@ class PoppingBalloon {
     }
 
     fun createBalloons(a: IntArray): Array<Balloon> {
+        if (a.size != a.distinct().size) {
+            throw IllegalArgumentException()
+        }
+
+        if (a.size !in 1..1000000) {
+            throw IllegalArgumentException()
+        }
+
         return a.map { Balloon.create(it) }.toTypedArray()
     }
 }

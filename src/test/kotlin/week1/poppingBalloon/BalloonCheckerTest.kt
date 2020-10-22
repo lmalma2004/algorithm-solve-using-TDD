@@ -9,7 +9,7 @@ internal class BalloonCheckerTest {
 
     @Test
     fun `the leftMin of the idx balloon is the minimum value of the begin ~ idx-1 balloons`() {
-        val result = intArrayOf(0, -16, -16, -16, -16, -16, -92, -92, -92, -92, -92)
+        val result = intArrayOf(-15, -16, -16, -16, -16, -16, -92, -92, -92, -92)
 
         val balloons = poppingBalloon.createBalloons(intArrayOf(-16, 27, 65, -2, 58, -92, -71, -68, -61, -33))
         val balloonChecker = BalloonChecker()
@@ -20,7 +20,7 @@ internal class BalloonCheckerTest {
 
     @Test
     fun `the rightMin of the idx balloon is the minimum value of the idx+1 ~ end-1 balloons`() {
-        val result = intArrayOf(-92, -92, -92, -92, -92, -71, -68, -61, -33, 0)
+        val result = intArrayOf(-92, -92, -92, -92, -92, -71, -68, -61 , -33, -32)
 
         val balloons = poppingBalloon.createBalloons(intArrayOf(-16, 27, 65, -2, 58, -92, -71, -68, -61, -33))
         val balloonChecker = BalloonChecker()
@@ -39,9 +39,8 @@ internal class BalloonCheckerTest {
             Balloon(1, 0, -9)
         )
         val balloonChecker = BalloonChecker()
-        val checkedBalloons = balloonChecker.check(balloons)
 
-        assertEquals(result, balloonChecker.count(checkedBalloons))
+        assertEquals(result, balloonChecker.count(balloons))
     }
 
     @Test
@@ -54,8 +53,7 @@ internal class BalloonCheckerTest {
             Balloon(5, 6, 7)
         )
         val balloonChecker = BalloonChecker()
-        val checkedBalloons = balloonChecker.check(balloons)
 
-        assertEquals(result, balloonChecker.count(checkedBalloons))
+        assertEquals(result, balloonChecker.count(balloons))
     }
 }
