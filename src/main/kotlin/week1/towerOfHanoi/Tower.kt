@@ -11,7 +11,7 @@ data class Tower(var discs : Stack<Int>) {
 
             val discs = Stack<Int>()
             for(i in n downTo 1) {
-                discs.push(n)
+                discs.push(i)
             }
 
             return Tower(discs)
