@@ -9,10 +9,6 @@ class State {
         TODO("Not yet implemented")
     }
 
-    fun lastPlaced(): Int {
-        TODO("Not yet implemented")
-    }
-
     companion object {
         fun of(towers: Array<Tower>): State {
             TODO("Not yet implemented")

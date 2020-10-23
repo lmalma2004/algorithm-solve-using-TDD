@@ -19,10 +19,6 @@ class Solver(val towers: Array<Tower>) {
             val mover = Mover.create(state)
 
             for (tower in towers.indices) {
-                if (tower == state.lastPlaced()) {
-                    continue
-                }
-
                 if (!mover.canMove(tower)) {
                     continue
                 }
