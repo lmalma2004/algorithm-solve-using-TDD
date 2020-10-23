@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="week1.poppingBalloon.BalloonTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-22T10:09:46" hostname="준모컴퓨터" time="0.007">
-  <properties/>
-  <testcase name="balloon number should be between -1,000,000,000 and 1,000,000,000()" classname="week1.poppingBalloon.BalloonTest" time="0.007"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
