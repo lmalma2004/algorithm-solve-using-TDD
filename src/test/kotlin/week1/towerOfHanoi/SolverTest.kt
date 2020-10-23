@@ -15,9 +15,9 @@ internal class SolverTest {
         )
 
         val towers = arrayOf(
-                Tower(3),
-                Tower(0),
-                Tower(0)
+                Tower.create(3),
+                Tower.create(0),
+                Tower.create(0)
         )
         val solver = Solver.of(towers)
 
@@ -37,9 +37,9 @@ internal class SolverTest {
         )
 
         val towers = arrayOf(
-                Tower(4),
-                Tower(0),
-                Tower(0)
+                Tower.create(4),
+                Tower.create(0),
+                Tower.create(0)
         )
         val solver = Solver.of(towers)
 
