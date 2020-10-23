@@ -10,7 +10,7 @@ class Solver(val towers: Array<Tower>) {
         states.add(startState)
 
         while (!states.isEmpty()) {
-            val state = states.peek()
+            val state = states.poll()
 
             if (state.isFinish()) {
                 return state.path()
@@ -18,13 +18,13 @@ class Solver(val towers: Array<Tower>) {
 
             val mover = Mover.create()
 
-            for (tower in towers.indices) {
+            for (tower in state.towers.indices) {
                 if (!mover.canMove(state, tower)) {
                     continue
                 }
 
                 mover.nextTowers(state, tower).forEach {
-                    val nextState = mover.move(state, tower, it)
+                    val nextState = mover.move(state.clone(), tower, it)
                     states.add(nextState)
                 }
             }
