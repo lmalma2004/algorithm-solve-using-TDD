@@ -16,15 +16,15 @@ class Solver(val towers: Array<Tower>) {
                 return state.path()
             }
 
-            val mover = Mover.create(state)
+            val mover = Mover.create()
 
             for (tower in towers.indices) {
-                if (!mover.canMove(tower)) {
+                if (!mover.canMove(state, tower)) {
                     continue
                 }
 
-                mover.nextTowers().forEach {
-                    val nextState = mover.move(tower, it)
+                mover.nextTowers(state).forEach {
+                    val nextState = mover.move(state, tower, it)
                     states.add(nextState)
                 }
             }

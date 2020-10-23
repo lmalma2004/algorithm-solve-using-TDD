@@ -2,20 +2,20 @@ package week1.towerOfHanoi
 
 class Mover {
     companion object {
-        fun create(state: State): Mover {
-            TODO("Not yet implemented")
+        fun create(): Mover {
+            return Mover()
         }
     }
 
-    fun canMove(tower: Int): Boolean {
+    fun canMove(state: State, tower: Int): Boolean {
         TODO("Not yet implemented")
     }
 
-    fun nextTowers(): IntArray {
+    fun nextTowers(state: State): IntArray {
         TODO("Not yet implemented")
     }
 
-    fun move(from: Int, to: Int): State {
+    fun move(state: State, from: Int, to: Int): State {
         TODO("Not yet implemented")
     }
 }
