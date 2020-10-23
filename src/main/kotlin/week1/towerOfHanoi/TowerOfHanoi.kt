@@ -9,7 +9,7 @@ class TowerOfHanoi {
 
     private fun createTowers(n: Int): Array<Tower> {
         val arr = arrayOf(
-                Tower.create(3),
+                Tower.create(n),
                 Tower.create(0),
                 Tower.create(0)
         )
