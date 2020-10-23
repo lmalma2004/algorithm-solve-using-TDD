@@ -15,7 +15,7 @@ class Mover {
         TODO("Not yet implemented")
     }
 
-    fun moveTo(tower: Int): State {
+    fun move(from: Int, to: Int): State {
         TODO("Not yet implemented")
     }
 }
