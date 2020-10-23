@@ -23,7 +23,7 @@ class Solver(val towers: Array<Tower>) {
                     continue
                 }
 
-                mover.nextTowers(state).forEach {
+                mover.nextTowers(state, tower).forEach {
                     val nextState = mover.move(state, tower, it)
                     states.add(nextState)
                 }
