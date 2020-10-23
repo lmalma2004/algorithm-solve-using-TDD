@@ -15,6 +15,12 @@ class State(
         return path.toTypedArray()
     }
 
+    fun clone(): State {
+        val towersClone = arrayListOf<Tower>()
+        towers.forEach { towersClone.add(it.copy()) }
+        return State(towersClone.toTypedArray(), path.toCollection(ArrayList()))
+    }
+
     companion object {
         fun of(towers: Array<Tower>): State {
             if(towers.size != 3) {
