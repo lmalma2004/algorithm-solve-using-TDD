@@ -13,6 +13,10 @@ class Mover {
                 continue
             }
 
+            if (state.towers[tower].discs.empty()) {
+               return false
+            }
+
             if(state.towers[i].discs.empty()) {
                 return true
             }
@@ -53,7 +57,7 @@ class Mover {
     fun move(state: State, from: Int, to: Int): State {
         val movingDisk = state.towers[from].discs.pop()
         state.towers[to].discs.push(movingDisk)
-        state.path.add(intArrayOf(from, to))
+        state.path.add(intArrayOf(from + 1, to + 1))
         return state
     }
 }
