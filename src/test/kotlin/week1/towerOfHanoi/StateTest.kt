@@ -88,17 +88,17 @@ internal class StateTest {
 
         state = mover.move(state,0, 1)
         assertArrayEquals(
-                arrayOf(intArrayOf(0, 1)), state.path())
+                arrayOf(intArrayOf(1, 2)), state.path())
 
         state = mover.move(state,1, 2)
         assertArrayEquals(
-                arrayOf(intArrayOf(0, 1),
-                        intArrayOf(1, 2)), state.path())
+                arrayOf(intArrayOf(1, 2),
+                        intArrayOf(2, 3)), state.path())
 
         state = mover.move(state,2, 1)
         assertArrayEquals(
-                arrayOf(intArrayOf(0, 1),
-                        intArrayOf(1, 2),
-                        intArrayOf(2, 1)), state.path())
+                arrayOf(intArrayOf(1, 2),
+                        intArrayOf(2, 3),
+                        intArrayOf(3, 2)), state.path())
     }
 }

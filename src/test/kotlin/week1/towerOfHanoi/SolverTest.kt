@@ -7,26 +7,26 @@ import org.junit.jupiter.api.Assertions.*
 internal class SolverTest {
 
     @Test
-    fun `when the number of discs is 3`() {
-        val result = listOf(
+    fun `when the number of discs is 2`() {
+        val result = arrayOf(
                 intArrayOf(1, 2),
                 intArrayOf(1, 3),
                 intArrayOf(2, 3)
         )
 
         val towers = arrayOf(
-                Tower.create(3),
+                Tower.create(2),
                 Tower.create(0),
                 Tower.create(0)
         )
         val solver = Solver.of(towers)
 
-        assertEquals(result, solver.execute())
+        assertArrayEquals(result, solver.execute())
     }
 
     @Test
-    fun `when the number of discs is 4`() {
-        val result = listOf(
+    fun `when the number of discs is 3`() {
+        val result = arrayOf(
                 intArrayOf(1, 3),
                 intArrayOf(1, 2),
                 intArrayOf(3, 2),
@@ -37,12 +37,12 @@ internal class SolverTest {
         )
 
         val towers = arrayOf(
-                Tower.create(4),
+                Tower.create(3),
                 Tower.create(0),
                 Tower.create(0)
         )
         val solver = Solver.of(towers)
 
-        assertEquals(result, solver.execute())
+        assertArrayEquals(result, solver.execute())
     }
 }
