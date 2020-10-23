@@ -2,7 +2,7 @@ package week1.towerOfHanoi
 
 import java.util.*
 
-data class Tower(var discs : Stack<Int>) {
+data class Tower(var discs: Stack<Int>) {
     companion object {
         fun create(n: Int): Tower {
             if(n < 0) {
@@ -16,5 +16,10 @@ data class Tower(var discs : Stack<Int>) {
 
             return Tower(discs)
         }
+    }
+
+    fun copy(): Tower {
+        val copyDiscs = discs.map { it }.toCollection(Stack())
+        return Tower(copyDiscs)
     }
 }
