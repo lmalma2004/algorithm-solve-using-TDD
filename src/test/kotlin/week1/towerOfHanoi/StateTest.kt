@@ -84,20 +84,18 @@ internal class StateTest {
                         Tower.create(0),
                         Tower.create(0))
         )
+        var mover = Mover.create()
 
-        var mover = Mover.create(state)
-        state = mover.move(0, 1)
+        state = mover.move(state,0, 1)
         assertArrayEquals(
                 arrayOf(intArrayOf(0, 1)), state.path())
 
-        mover = Mover.create(state)
-        state = mover.move(1, 2)
+        state = mover.move(state,1, 2)
         assertArrayEquals(
                 arrayOf(intArrayOf(0, 1),
                         intArrayOf(1, 2)), state.path())
 
-        mover = Mover.create(state)
-        state = mover.move(2, 1)
+        state = mover.move(state,2, 1)
         assertArrayEquals(
                 arrayOf(intArrayOf(0, 1),
                         intArrayOf(1, 2),

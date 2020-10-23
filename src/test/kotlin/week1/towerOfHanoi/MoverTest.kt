@@ -43,11 +43,13 @@ internal class MoverTest {
                 Tower.create(0))
         )
         val mover = Mover.create()
+        assertArrayEquals(intArrayOf(1, 2), mover.nextTowers(state, 0))
 
         state = mover.move(state,0, 1)
-        state = mover.move(state,0, 2)
+        assertArrayEquals(intArrayOf(2), mover.nextTowers(state, 0))
 
-        assertArrayEquals(intArrayOf(1, 2), mover.nextTowers(state))
+        state = mover.move(state,0, 2)
+        assertArrayEquals(intArrayOf(0, 2), mover.nextTowers(state, 1))
     }
 
     @Test
