@@ -1,13 +1,17 @@
 package week2.matchingScore
 
 data class Page(val url: String,
-                val idx: Int,
-                var basicScore: Int = 0,
-                var matchScore: Int = 0,
+                val idx: Int = 0,
+                var basicScore: Double = 0.0,
+                var linkScore: Double = 0.0,
                 var linkCnt: Int = 0,
-) {
+): Comparable<Page> {
+    override fun compareTo(other: Page): Int {
+        TODO("Not yet implemented")
+    }
+
     companion object {
-        fun create(idx: Int, s: String): Page {
+        fun create(s: String, idx: Int): Page {
             TODO("Not yet implemented")
         }
     }
