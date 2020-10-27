@@ -4,13 +4,24 @@ import java.util.*
 
 class PageCalculator private constructor() {
 
-    fun cal(pages: SortedSet<Page>, it: Page, word: String) {
-        TODO("Not yet implemented")
+    fun calBasicScore(page: Page, word: String) {
+        page.basicScore = HtmlParser.findWord(page.html, word)
+    }
+
+    fun calLinkScore(pages: SortedMap<String, Page>, pageUrl: String, word: String) {
+        var sum = 0.0
+
+        pages[pageUrl]!!.links.forEach {
+            val page = pages[it]!!
+            sum += (page.basicScore / page.links.size)
+        }
+
+        pages[pageUrl]!!.linkScore = sum
     }
 
     companion object {
         fun create(): PageCalculator {
-            TODO("Not yet implemented")
+            return PageCalculator()
         }
     }
 }
