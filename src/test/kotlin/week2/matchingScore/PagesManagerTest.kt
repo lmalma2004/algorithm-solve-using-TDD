@@ -7,7 +7,7 @@ import java.util.*
 
 internal class PagesManagerTest {
 
-    private val pagesManager = PagesManager()
+    private val pagesManager = PagesManager.create()
 
     @Test
     fun `모든 웹페이지들의 점수를 계산해야 한다`() {
