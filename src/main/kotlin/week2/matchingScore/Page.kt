@@ -7,12 +7,19 @@ data class Page(val html: String,
                 var links: ArrayList<String> = arrayListOf(),
 ): Comparable<Page> {
     override fun compareTo(other: Page): Int {
-        TODO("Not yet implemented")
+        val matchPoint = basicScore + linkScore
+        val otherMatchPoint = other.basicScore + other.linkScore
+
+        return when {
+            matchPoint > otherMatchPoint -> 1
+            matchPoint < otherMatchPoint -> -1
+            else -> idx - other.idx
+        }
     }
 
     companion object {
         fun create(s: String, idx: Int): Page {
-            TODO("Not yet implemented")
+            return Page(s, idx)
         }
     }
 }
