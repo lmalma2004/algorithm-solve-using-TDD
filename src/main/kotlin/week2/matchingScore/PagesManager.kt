@@ -3,7 +3,7 @@ package week2.matchingScore
 import java.util.*
 
 class PagesManager private constructor(val pages: TreeMap<Page, Boolean>) {
-    fun calPageScore(word: String) {
+    fun calPagesScore(word: String) {
         TODO("Not yet implemented")
     }
 
