@@ -24,7 +24,7 @@ internal class PageCalculatorTest {
 
         val results = arrayOf(2, 3, 4)
 
-        inputPages.forEach { pageCalculator.cal(inputPages, it, inputWord) }
+        inputPages.forEach { pageCalculator.calBasicScore(it, inputWord) }
 
         assertEquals(results[0], inputPage0.basicScore)
         assertEquals(results[1], inputPage1.basicScore)
@@ -47,34 +47,7 @@ internal class PageCalculatorTest {
 
         val results = arrayOf(1, 2, 3)
 
-        inputPages.forEach { pageCalculator.cal(inputPages, it, inputWord) }
-
-        assertEquals(results[0], inputPage0.basicScore)
-        assertEquals(results[1], inputPage1.basicScore)
-        assertEquals(results[2], inputPage2.basicScore)
-    }
-
-    @Test
-    fun `외부 링크수는 다른 웹페이지로 링크가 걸린 개수이다`() {
-        val inputWord = "blind"
-
-        val inputHtml0 = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>"
-        val inputHtml1 = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://b.com\"/>\n</head>  \n<body>\nSuspendisse potenti. Vivamus venenatis tellus non turpis bibendum, \n<a href=\"https://a.com\"> Link to a </a>\nblind sed congue urna varius. Suspendisse feugiat nisl ligula, quis malesuada felis hendrerit ut.\n<a href=\"https://c.com\"> Link to c </a>\n</body>\n</html>"
-        val inputHtml2 = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://c.com\"/>\n</head>  \n<body>\nUt condimentum urna at felis sodales rutrum. Sed dapibus cursus diam, non interdum nulla tempor nec. Phasellus rutrum enim at orci consectetu blind\n<a href=\"https://a.com\"> Link to a </a>\n</body>\n</html>"
-
-        val inputPage0 = Page.create(inputHtml0, 0)
-        val inputPage1 = Page.create(inputHtml1, 1)
-        val inputPage2 = Page.create(inputHtml2, 2)
-
-        val inputPages = TreeSet<Page>().apply {
-            add(inputPage0)
-            add(inputPage1)
-            add(inputPage2)
-        }
-
-        val results = arrayOf(1, 2, 1)
-
-        inputPages.forEach { pageCalculator.cal(inputPages, it, inputWord) }
+        inputPages.forEach { pageCalculator.calBasicScore(it, inputWord) }
 
         assertEquals(results[0], inputPage0.basicScore)
         assertEquals(results[1], inputPage1.basicScore)
@@ -93,15 +66,15 @@ internal class PageCalculatorTest {
         val inputPage1 = Page.create(inputHtml1, 1)
         val inputPage2 = Page.create(inputHtml2, 2)
 
-        val inputPages = TreeSet<Page>().apply {
-            add(inputPage0)
-            add(inputPage1)
-            add(inputPage2)
+        val inputPages = TreeMap<Page, Boolean>().apply {
+            put(inputPage0, true)
+            put(inputPage1, true)
+            put(inputPage2, true)
         }
 
         val results = arrayOf(1.5, 3, 0.5)
 
-        inputPages.forEach { pageCalculator.cal(inputPages, it, inputWord) }
+        inputPages.forEach { pageCalculator.calLinkScore(inputPages, it.key, inputWord) }
 
         assertEquals(results[0], inputPage0.linkScore)
         assertEquals(results[1], inputPage1.linkScore)
