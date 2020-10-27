@@ -4,10 +4,10 @@ import java.util.*
 
 class MatchingScore {
     fun solution(word: String, pages: Array<String>): Int {
-        val mapOfPages = TreeSet<Page>()
+        val mapOfPages = TreeMap<Page, Boolean>()
 
         pages.forEachIndexed { index, s ->
-            mapOfPages.add(Page.create(s, index))
+            mapOfPages[Page.create(s, index)] = true
         }
 
         val pagesManager = PagesManager.create()
