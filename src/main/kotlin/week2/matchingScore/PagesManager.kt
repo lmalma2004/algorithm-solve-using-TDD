@@ -3,16 +3,16 @@ package week2.matchingScore
 import java.util.*
 
 class PagesManager private constructor() {
-    fun calPagesScore(pages: SortedMap<Page, Boolean>, word: String) {
+
+    fun calPagesScore(pages: SortedMap<String, Page>, word: String) {
         val pageCalculator = PageCalculator.create()
-        val htmlParser = HtmlParser.create()
 
         pages.forEach {
-            htmlParser.findLinks(it)
+            HtmlParser.findLinks(it.value.html)
         }
 
         pages.forEach {
-            pageCalculator.calBasicScore(it.key, word)
+            pageCalculator.calBasicScore(it.value, word)
         }
 
         pages.forEach {
@@ -20,9 +20,9 @@ class PagesManager private constructor() {
         }
     }
 
-    fun getPageIdxOfMaxScore(pages: SortedMap<Page, Boolean>): Int {
+    fun getPageIdxOfMaxScore(pages: SortedMap<String, Page>): Int {
         pages.toSortedMap()
-        return pages.firstKey().idx
+        return pages[pages.firstKey()]!!.idx
     }
 
     companion object {
