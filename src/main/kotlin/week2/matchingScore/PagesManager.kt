@@ -3,11 +3,11 @@ package week2.matchingScore
 import java.util.*
 
 class PagesManager {
-    fun calPagesScore(pages: TreeMap<Page, Boolean>, word: String) {
+    fun calPagesScore(pages: SortedMap<Page, Boolean>, word: String) {
         TODO("Not yet implemented")
     }
 
-    fun getPageIdxOfMaxScore(pages: TreeMap<Page, Boolean>): Int {
+    fun getPageIdxOfMaxScore(pages: SortedMap<Page, Boolean>): Int {
         TODO("Not yet implemented")
     }
 
