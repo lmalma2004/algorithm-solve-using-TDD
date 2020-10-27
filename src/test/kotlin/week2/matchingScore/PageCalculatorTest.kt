@@ -16,15 +16,15 @@ internal class PageCalculatorTest {
         val inputPage1 = Page.create("hi hi hi", 1)
         val inputPage2 = Page.create("hi HI Hi hI", 2)
 
-        val inputPages = TreeSet<Page>().apply {
-            add(inputPage0)
-            add(inputPage1)
-            add(inputPage2)
+        val inputPages = TreeMap<String, Page>().apply {
+            put("p0", inputPage0)
+            put("p1", inputPage1)
+            put("p2", inputPage2)
         }
 
         val results = arrayOf(2, 3, 4)
 
-        inputPages.forEach { pageCalculator.calBasicScore(it, inputWord) }
+        inputPages.forEach { pageCalculator.calBasicScore(it.value, inputWord) }
 
         assertEquals(results[0], inputPage0.basicScore)
         assertEquals(results[1], inputPage1.basicScore)
@@ -39,15 +39,15 @@ internal class PageCalculatorTest {
         val inputPage1 = Page.create("hi hihihi hi", 1)
         val inputPage2 = Page.create("hi HI Hih hI", 2)
 
-        val inputPages = TreeSet<Page>().apply {
-            add(inputPage0)
-            add(inputPage1)
-            add(inputPage2)
+        val inputPages = TreeMap<String, Page>().apply {
+            put("p0", inputPage0)
+            put("p1", inputPage1)
+            put("p2", inputPage2)
         }
 
         val results = arrayOf(1, 2, 3)
 
-        inputPages.forEach { pageCalculator.calBasicScore(it, inputWord) }
+        inputPages.forEach { pageCalculator.calBasicScore(it.value, inputWord) }
 
         assertEquals(results[0], inputPage0.basicScore)
         assertEquals(results[1], inputPage1.basicScore)
@@ -66,10 +66,10 @@ internal class PageCalculatorTest {
         val inputPage1 = Page.create(inputHtml1, 1)
         val inputPage2 = Page.create(inputHtml2, 2)
 
-        val inputPages = TreeMap<Page, Boolean>().apply {
-            put(inputPage0, true)
-            put(inputPage1, true)
-            put(inputPage2, true)
+        val inputPages = TreeMap<String, Page>().apply {
+            put("p0", inputPage0)
+            put("p1", inputPage1)
+            put("p2", inputPage2)
         }
 
         val results = arrayOf(1.5, 3, 0.5)
