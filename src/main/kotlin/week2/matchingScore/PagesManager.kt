@@ -2,17 +2,17 @@ package week2.matchingScore
 
 import java.util.*
 
-class PagesManager private constructor(val pages: TreeMap<Page, Boolean>) {
-    fun calPagesScore(word: String) {
+class PagesManager {
+    fun calPagesScore(pages: TreeMap<Page, Boolean>, word: String) {
         TODO("Not yet implemented")
     }
 
-    fun getPageIdxOfMaxScore(): Int {
+    fun getPageIdxOfMaxScore(pages: TreeMap<Page, Boolean>): Int {
         TODO("Not yet implemented")
     }
 
     companion object {
-        fun of(pages: Array<String>): PagesManager {
+        fun create(): PagesManager {
             TODO("Not yet implemented")
         }
     }
