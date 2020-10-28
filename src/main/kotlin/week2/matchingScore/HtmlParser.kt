@@ -3,7 +3,7 @@ package week2.matchingScore
 object HtmlParser {
 
     fun findUrl(html: String): String {
-        var idx = html.indexOf("content=") + 17
+        var idx = html.indexOf("<meta property=\"og:url\" content=") + 41
         var url = ""
 
         while(html[idx] != '\"') {
