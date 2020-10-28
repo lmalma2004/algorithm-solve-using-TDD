@@ -8,7 +8,7 @@ class PagesManager private constructor() {
         val pageCalculator = PageCalculator.create()
 
         pages.forEach {
-            HtmlParser.findLinks(it.value.html)
+            it.value.links = HtmlParser.findLinks(it.value.html)
         }
 
         pages.forEach {
