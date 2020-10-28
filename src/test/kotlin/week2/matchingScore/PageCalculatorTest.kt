@@ -9,7 +9,7 @@ internal class PageCalculatorTest {
     private val pageCalculator = PageCalculator.create()
 
     @Test
-    fun `기본점수는 웹페이지에서 검색어가 등장한 횟수이다 (대소문자 무시)`() {
+    fun `기본점수는 웹페이지에서 검색어가 등장한 횟수, 대소문자 무시`() {
         val inputWord = "hi"
 
         val inputPage0 = Page.create("hi hi", 0)
@@ -26,9 +26,9 @@ internal class PageCalculatorTest {
 
         inputPages.forEach { pageCalculator.calBasicScore(it.value, inputWord) }
 
-        assertEquals(results[0], inputPage0.basicScore)
-        assertEquals(results[1], inputPage1.basicScore)
-        assertEquals(results[2], inputPage2.basicScore)
+        assertEquals(results[0], inputPage0.basicScore.toInt())
+        assertEquals(results[1], inputPage1.basicScore.toInt())
+        assertEquals(results[2], inputPage2.basicScore.toInt())
     }
 
     @Test
@@ -49,9 +49,9 @@ internal class PageCalculatorTest {
 
         inputPages.forEach { pageCalculator.calBasicScore(it.value, inputWord) }
 
-        assertEquals(results[0], inputPage0.basicScore)
-        assertEquals(results[1], inputPage1.basicScore)
-        assertEquals(results[2], inputPage2.basicScore)
+        assertEquals(results[0], inputPage0.basicScore.toInt())
+        assertEquals(results[1], inputPage1.basicScore.toInt())
+        assertEquals(results[2], inputPage2.basicScore.toInt())
     }
 
     @Test
@@ -67,13 +67,15 @@ internal class PageCalculatorTest {
         val inputPage2 = Page.create(inputHtml2, 2)
 
         val inputPages = TreeMap<String, Page>().apply {
-            put("p0", inputPage0)
-            put("p1", inputPage1)
-            put("p2", inputPage2)
+            put("a.com", inputPage0)
+            put("b.com", inputPage1)
+            put("c.com", inputPage2)
         }
 
-        val results = arrayOf(1.5, 3, 0.5)
+        val results = arrayOf(1.5, 3.0, 0.5)
 
+        inputPages.forEach { it.value.links = HtmlParser.findLinks(it.value.html) }
+        inputPages.forEach { pageCalculator.calBasicScore(it.value, inputWord) }
         inputPages.forEach { pageCalculator.calLinkScore(inputPages, it.key, inputWord) }
 
         assertEquals(results[0], inputPage0.linkScore)
