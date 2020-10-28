@@ -2,13 +2,13 @@ package week2.matchingScore
 
 import java.util.*
 
-class PageCalculator private constructor() {
+class PageCalculator {
 
     fun calBasicScore(page: Page, word: String) {
         page.basicScore = HtmlParser.findWord(page.html, word)
     }
 
-    fun calLinkScore(pages: SortedMap<String, Page>, pageUrl: String, word: String) {
+    fun calLinkScore(pages: HashMap<String, Page>, pageUrl: String, word: String) {
         var sum = 0.0
 
         pages.forEach {
@@ -18,11 +18,5 @@ class PageCalculator private constructor() {
         }
 
         pages[pageUrl]!!.linkScore = sum
-    }
-
-    companion object {
-        fun create(): PageCalculator {
-            return PageCalculator()
-        }
     }
 }

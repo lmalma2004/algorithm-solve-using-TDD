@@ -4,23 +4,16 @@ object HtmlParser {
 
     fun findUrl(html: String): String {
         var idx = html.indexOf("<meta property=\"og:url\" content=") + 41
-        var url = ""
-
-        while(html[idx] != '\"') {
-            url += html[idx]
-            idx++
-        }
-
-        return url
+        return findLink(html, idx)
     }
 
     fun findWord(html: String, word: String): Double {
         val upperCaseHtml = html.toUpperCase()
 
         val regex = "([^A-Z])"
-        val arr = upperCaseHtml.split(regex.toRegex())
+        val splitWords = upperCaseHtml.split(regex.toRegex())
 
-        return arr.filter { it == word.toUpperCase() }.size.toDouble()
+        return splitWords.filter { it == word.toUpperCase() }.size.toDouble()
     }
 
     fun findLinks(html: String): ArrayList<String> {
@@ -28,19 +21,25 @@ object HtmlParser {
         val jumpSize = 16
 
         val links = arrayListOf<String>()
-        while(idx != -1) {
+        while (idx != -1) {
             idx += jumpSize
 
-            var link = ""
-            while(html[idx] != '\"') {
-                link += html[idx]
-                idx++
-            }
+            val link = findLink(html, idx)
             links.add(link)
 
             idx = html.indexOf("a href=", idx)
         }
 
         return links
+    }
+
+    private fun findLink(s: String, startIdx: Int): String {
+        var idx = startIdx
+        var link = ""
+        while (s[idx] != '\"') {
+            link += s[idx]
+            idx++
+        }
+        return link
     }
 }

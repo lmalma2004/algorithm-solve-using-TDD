@@ -7,7 +7,7 @@ import java.util.*
 
 internal class PagesManagerTest {
 
-    private val pagesManager = PagesManager.create()
+    private val pagesManager = PagesManager()
 
     @Test
     fun `모든 웹페이지들의 점수를 계산해야 한다`() {
@@ -22,18 +22,21 @@ internal class PagesManagerTest {
         val inputPage2 = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://c.com\"/>\n</head>  \n<body>\nUt condimentum urna at felis sodales rutrum. Sed dapibus cursus diam, non interdum nulla tempor nec. Phasellus rutrum enim at orci consectetu blind\n<a href=\"https://a.com\"> Link to a </a>\n</body>\n</html>"
         val inputPageUrl2 = HtmlParser.findUrl(inputPage2)
 
-        val inputPages = TreeMap<String, Page>()
+        val inputPages = HashMap<String, Page>()
         inputPages[inputPageUrl0] = Page.create(inputPage0, 0)
         inputPages[inputPageUrl1] = Page.create(inputPage1, 1)
         inputPages[inputPageUrl2] = Page.create(inputPage2, 2)
+
+        inputPages.forEach {
+            it.value.links = HtmlParser.findLinks(it.value.html)
+        }
+        pagesManager.calPagesScore(inputPages, inputWord)
 
         val results = arrayOf(
                 Page(inputPage0, 0, 3.0, 1.5),
                 Page(inputPage1, 1, 1.0, 3.0),
                 Page(inputPage2, 2, 1.0, 0.5)
         )
-
-        pagesManager.calPagesScore(inputPages, inputWord)
 
         assertEquals(results[0].basicScore, inputPages[inputPageUrl0]!!.basicScore)
         assertEquals(results[0].linkScore, inputPages[inputPageUrl0]!!.linkScore)
@@ -47,7 +50,7 @@ internal class PagesManagerTest {
 
     @Test
     fun `매칭점수가 가장 높은 웹페이지가 여러개라면, 인덱스가 가장 낮은 웹페이지를 반환해야 한다`() {
-        val inputPages = TreeMap<String, Page>()
+        val inputPages = HashMap<String, Page>()
 
         inputPages["page0"] = Page("page0", 0, 3.0, 1.5)
         assertEquals(0, pagesManager.getPageIdxOfMaxScore(inputPages))

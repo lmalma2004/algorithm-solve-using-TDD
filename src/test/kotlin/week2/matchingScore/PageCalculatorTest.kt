@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions.*
 import java.util.*
 
 internal class PageCalculatorTest {
-    private val pageCalculator = PageCalculator.create()
+    private val pageCalculator = PageCalculator()
 
     @Test
     fun `기본점수는 웹페이지에서 검색어가 등장한 횟수, 대소문자 무시`() {
@@ -16,7 +16,7 @@ internal class PageCalculatorTest {
         val inputPage1 = Page.create("hi hi hi", 1)
         val inputPage2 = Page.create("hi HI Hi hI", 2)
 
-        val inputPages = TreeMap<String, Page>().apply {
+        val inputPages = HashMap<String, Page>().apply {
             put("p0", inputPage0)
             put("p1", inputPage1)
             put("p2", inputPage2)
@@ -39,7 +39,7 @@ internal class PageCalculatorTest {
         val inputPage1 = Page.create("hi hihihi hi", 1)
         val inputPage2 = Page.create("hi HI Hih hI", 2)
 
-        val inputPages = TreeMap<String, Page>().apply {
+        val inputPages = HashMap<String, Page>().apply {
             put("p0", inputPage0)
             put("p1", inputPage1)
             put("p2", inputPage2)
@@ -66,7 +66,7 @@ internal class PageCalculatorTest {
         val inputPage1 = Page.create(inputHtml1, 1)
         val inputPage2 = Page.create(inputHtml2, 2)
 
-        val inputPages = TreeMap<String, Page>().apply {
+        val inputPages = HashMap<String, Page>().apply {
             put("a.com", inputPage0)
             put("b.com", inputPage1)
             put("c.com", inputPage2)
