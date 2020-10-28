@@ -35,14 +35,21 @@ internal class PagesManagerTest {
 
         pagesManager.calPagesScore(inputPages, inputWord)
 
-        assertArrayEquals(results, inputPages.toList().toTypedArray())
+        assertEquals(results[0].basicScore, inputPages[inputPageUrl0]!!.basicScore)
+        assertEquals(results[0].linkScore, inputPages[inputPageUrl0]!!.linkScore)
+
+        assertEquals(results[1].basicScore, inputPages[inputPageUrl1]!!.basicScore)
+        assertEquals(results[1].linkScore, inputPages[inputPageUrl1]!!.linkScore)
+
+        assertEquals(results[2].basicScore, inputPages[inputPageUrl2]!!.basicScore)
+        assertEquals(results[2].linkScore, inputPages[inputPageUrl2]!!.linkScore)
     }
 
     @Test
     fun `매칭점수가 가장 높은 웹페이지가 여러개라면, 인덱스가 가장 낮은 웹페이지를 반환해야 한다`() {
         val inputPages = TreeMap<String, Page>()
 
-        inputPages["page0"] = Page("page0", 1, 3.0, 1.5)
+        inputPages["page0"] = Page("page0", 0, 3.0, 1.5)
         assertEquals(0, pagesManager.getPageIdxOfMaxScore(inputPages))
 
         inputPages["page1"] = Page("page1", 1, 3.0, 1.5)
