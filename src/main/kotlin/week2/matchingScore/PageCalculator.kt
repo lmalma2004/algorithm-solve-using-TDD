@@ -11,9 +11,10 @@ class PageCalculator private constructor() {
     fun calLinkScore(pages: SortedMap<String, Page>, pageUrl: String, word: String) {
         var sum = 0.0
 
-        pages[pageUrl]!!.links.forEach {
-            val page = pages[it]!!
-            sum += (page.basicScore / page.links.size)
+        pages.forEach {
+            if (it.value.links.contains(pageUrl)) {
+                sum += it.value.basicScore / it.value.links.size
+            }
         }
 
         pages[pageUrl]!!.linkScore = sum
