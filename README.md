@@ -11,3 +11,4 @@
 
 - 2주차
   - [매칭점수](https://programmers.co.kr/learn/courses/30/lessons/42893)
+  - [이중우선순위큐](https://programmers.co.kr/learn/courses/30/lessons/42628)
