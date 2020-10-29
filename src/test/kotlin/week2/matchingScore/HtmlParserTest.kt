@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions.*
 internal class HtmlParserTest {
 
     @Test
-    fun `검색어가 등장한 횟수를 반환한다`() {
+    fun `returns the number of times a search term has appeared`() {
         val inputWord = "blind"
 
         var inputHtml = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>"
@@ -21,7 +21,7 @@ internal class HtmlParserTest {
     }
 
     @Test
-    fun `url정보는 'content=' 이후에 나오는 주소값이다`() {
+    fun `url information is the address value after 'content='`() {
         var inputHtml = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>"
         assertEquals("a.com", HtmlParser.findUrl(inputHtml))
 
@@ -33,7 +33,7 @@ internal class HtmlParserTest {
     }
 
     @Test
-    fun `외부링크들은 'a href=' 이후에 등장한다`() {
+    fun `external links appear after 'a href='`() {
         var result = arrayOf("b.com")
         var inputHtml = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>"
         assertArrayEquals(result, HtmlParser.findLinks(inputHtml).toArray())

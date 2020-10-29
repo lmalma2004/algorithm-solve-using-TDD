@@ -9,7 +9,7 @@ internal class PageCalculatorTest {
     private val pageCalculator = PageCalculator()
 
     @Test
-    fun `기본점수는 웹페이지에서 검색어가 등장한 횟수, 대소문자 무시`() {
+    fun `the base score is the number of times a search term appears on a webpage, ignore single-case letters`() {
         val inputWord = "hi"
 
         val inputPage0 = Page.create("hi hi", 0)
@@ -32,7 +32,7 @@ internal class PageCalculatorTest {
     }
 
     @Test
-    fun `검색어는 단어 단위로 비교하며, 단어와 완전히 일치하는 경우에만 기본 점수에 반영한다`() {
+    fun `search words are compared in terms of words and are reflected in the base score only if they are fully matched`() {
         val inputWord = "hi"
 
         val inputPage0 = Page.create("hihi hi", 0)
@@ -55,7 +55,7 @@ internal class PageCalculatorTest {
     }
 
     @Test
-    fun `링크점수는 해당 웹페이지로 링크가 걸린 다른 웹페이지의 기본점수 ÷ 외부 링크 수의 총합이다`() {
+    fun `the link score is the sum of the base scores of other web pages linked to that webpage divided by the number of external links`() {
         val inputWord = "blind"
 
         val inputHtml0 = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>"

@@ -10,7 +10,7 @@ internal class PagesManagerTest {
     private val pagesManager = PagesManager()
 
     @Test
-    fun `모든 웹페이지들의 점수를 계산해야 한다`() {
+    fun `have to calculate the scores of all the web pages`() {
         val inputWord = "blind"
 
         val inputPage0 = "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>"
@@ -49,7 +49,7 @@ internal class PagesManagerTest {
     }
 
     @Test
-    fun `매칭점수가 가장 높은 웹페이지가 여러개라면, 인덱스가 가장 낮은 웹페이지를 반환해야 한다`() {
+    fun `if you have multiple Web pages with the highest matching score, you must return the lowest Web page in the index`() {
         val inputPages = HashMap<String, Page>()
 
         inputPages["page0"] = Page("page0", 0, 3.0, 1.5)
