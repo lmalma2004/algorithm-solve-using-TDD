@@ -5,7 +5,7 @@ data class Page(
         val idx: Int = 0,
         var basicScore: Double = 0.0,
         var linkScore: Double = 0.0,
-        var links: ArrayList<String> = arrayListOf(),
+        var links: List<String> = listOf(),
 ) {
 
     companion object {
